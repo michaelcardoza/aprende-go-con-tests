@@ -100,9 +100,9 @@ Abordando otros temas relacionados con las pruebas.
 * Algo de experiencia en programación. Comprensión de conceptos como `if`, variables, funciones, etc.
 * Sentirte cómodo usando la terminal
 
-## Comentarios
+## Feedback
 
-* Crea issues o envía PRs [aquí](https://github.com/quii/learn-go-with-tests)
+* Crea issues o envía PRs [aquí](https://github.com/michaelcardoza/aprende-go-con-tests)
 * [Twitter @quii - Autor Original](https://twitter.com/quii)
 * [Twitter @Mike_ErrNil - Autor de versión en español](https://twitter.com/Mike_ErrNil)
 
