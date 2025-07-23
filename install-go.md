@@ -1,20 +1,20 @@
-# Install Go, set up environment for productivity
+# Instalar Go y configurar el entorno para ser productivo
 
-The official installation instructions for Go are available [here](https://golang.org/doc/install).
+Las instrucciones oficiales para instalar Go están disponibles [aquí](https://golang.org/doc/install).
 
-## Go Environment
+## Entorno de Go
 
-### Go Modules
+### Módulos de Go
 
-Go 1.11 introduced [Modules](https://go.dev/wiki/Modules). This approach is the default build mode since Go 1.16, therefore the use of `GOPATH` is not recommended.
+Go 1.11 introdujo los [Módulos](https://go.dev/wiki/Modules). Este enfoque es el modo de construcción predeterminado desde Go 1.16, por lo tanto, no se recomienda el uso de `GOPATH`.
 
-Modules aim to solve problems related to dependency management, version selection and reproducible builds; they also enable users to run Go code outside of `GOPATH`.
+Los módulos buscan resolver problemas relacionados con la gestión de dependencias, selección de versiones y compilaciones reproducibles; además permiten a los usuarios ejecutar código Go fuera de `GOPATH`.
 
-Using Modules is pretty straightforward. Select any directory outside `GOPATH` as the root of your project, and create a new module with the `go mod init` command.
+Usar módulos es bastante sencillo. Selecciona cualquier directorio fuera de `GOPATH` como raíz de tu proyecto y crea un nuevo módulo con el comando `go mod init`.
 
-A `go.mod` file will be generated, containing the module path, a Go version, and its dependency requirements, which are the other modules needed for a successful build.
+Se generará un archivo `go.mod`, que contiene la ruta del módulo, la versión de Go y los requisitos de dependencias, que son los otros módulos necesarios para una compilación exitosa.
 
-If no `<modulepath>` is specified, `go mod init` will try to guess the module path from the directory structure. It can also be overridden by supplying an argument.
+Si no se especifica un `<modulepath>`, `go mod init` intentará adivinar la ruta del módulo a partir de la estructura del directorio. También se puede sobrescribir proporcionando un argumento.
 
 ```sh
 mkdir my-project
@@ -22,54 +22,56 @@ cd my-project
 go mod init <modulepath>
 ```
 
-A `go.mod` file could look like this:
+Un archivo `go.mod` puede verse así:
 
 ```
 module cmd
 
 go 1.16
-
 ```
 
-The built-in documentation provides an overview of all available `go mod` commands.
+La documentación incorporada proporciona una visión general de todos los comandos disponibles de `go mod`.
 
 ```sh
 go help mod
+```
+
+```sh
 go help mod init
 ```
 
-## Go Linting
+## Linter de Go
 
-An improvement over the default linter can be configured using [GolangCI-Lint](https://golangci-lint.run).
+Se puede configurar una mejora sobre el linter predeterminado usando [GolangCI-Lint](https://golangci-lint.run).
 
-This can be installed as follows:
+Puede instalarse con:
 
 ```sh
 brew install golangci-lint
 ```
 
-## Refactoring and your tooling
+## Refactorización y tus herramientas
 
-A big emphasis of this book is the importance of refactoring.
+Este libro hace mucho énfasis en la importancia de la refactorización.
 
-Your tools can help you do bigger refactoring with confidence.
+Tus herramientas pueden ayudarte a hacer refactorizaciones más grandes con confianza.
 
-You should be familiar enough with your editor to perform the following with a simple key combination:
+Debes estar lo suficientemente familiarizado con tu editor para realizar lo siguiente con una simple combinación de teclas:
 
-- **Extract/Inline variable**. Taking magic values and giving them a name lets you simplify your code quickly.
-- **Extract method/function**. It is vital to be able to take a section of code and extract functions/methods
-- **Rename**. You should be able to rename symbols across files confidently.
-- **go fmt**. Go has an opinioned formatter called `go fmt`. Your editor should run this on every file saved.
-- **Run tests**. You should be able to do any of the above and then quickly re-run your tests to ensure your refactoring hasn't broken anything.
+- **Extraer/Inline de variables**. Dar nombre a valores mágicos te permite simplificar tu código rápidamente.
+- **Extraer método/función**. Es vital poder tomar una sección de código y extraer funciones o métodos.
+- **Renombrar**. Debes poder renombrar símbolos a través de varios archivos con confianza.
+- **go fmt**. Go tiene un formateador con opiniones llamado go fmt. Tu editor debe ejecutarlo al guardar cada archivo.
+- **Ejecutar pruebas**. Debes poder hacer cualquiera de las acciones anteriores y luego ejecutar rápidamente tus pruebas para asegurarte de que tu refactorización no haya roto nada.
 
-In addition, to help you work with your code, you should be able to:
+Además, para ayudarte a trabajar con tu código, deberías poder:
 
-- **View function signature**. You should never be unsure how to call a function in Go. Your IDE should describe a function in terms of its documentation, its parameters and what it returns.
-- **View function definition**. If it's still unclear what a function does, you should be able to jump to the source code and try and figure it out yourself.
-- **Find usages of a symbol**. Understanding a function's context can help you make decisions when refactoring.
+- **Ver la firma de una función**. Nunca deberías tener dudas sobre cómo llamar a una función en Go. Tu IDE debería describir una función con su documentación, sus parámetros y lo que devuelve.
+- **Ver la definición de una función**. Si aún no está claro qué hace una función, deberías poder ir al código fuente e investigarlo tú mismo.
+- **Encontrar usos de un símbolo**. Entender el contexto de una función puede ayudarte a tomar decisiones al refactorizar.
 
-Mastering your tools will help you concentrate on the code and reduce context switching.
+Dominar tus herramientas te ayudará a concentrarte en el código y reducir el cambio de contexto.
 
-## Wrapping up
+## Conclusión
 
-At this point, you should have Go installed, an editor available, and some basic tooling in place. Go has a very large ecosystem of third-party products. We have identified a few useful components here. For a more complete list, see [https://awesome-go.com](https://awesome-go.com).
+A este punto, deberías tener Go instalado, un editor disponible y algunas herramientas básicas configuradas. Go tiene un ecosistema muy amplio de productos de terceros. Aquí hemos identificado algunos componentes útiles. Para una lista más completa, visita [https://awesome-go.com](https://awesome-go.com).
