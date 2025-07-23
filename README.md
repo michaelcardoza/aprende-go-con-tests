@@ -1,4 +1,4 @@
-# Learn Go with Tests
+# Aprende Go con tests
 
 <p align="center">
   <img src="red-green-blue-gophers-smaller.png" />
@@ -6,174 +6,106 @@
 
 [Art by Denise](https://twitter.com/deniseyu21)
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/quii/learn-go-with-tests)](https://goreportcard.com/report/github.com/quii/learn-go-with-tests)
+## Formatos
 
-## Formats
+- [Gitbook](https://michaelcardoza.gitbook.io/aprende-go-con-tests)
+- [EPUB or PDF](https://github.com/michaelcardoza/learn-go-with-tests/releases)
 
-- [Gitbook](https://quii.gitbook.io/learn-go-with-tests)
-- [EPUB or PDF](https://github.com/quii/learn-go-with-tests/releases)
+## Motivación
 
-## Translations
+* Explora Go escribiendo pruebas
+* **Obtén una base con TDD**. Go es un buen lenguaje para aprender TDD porque es un lenguaje simple de aprender y el testing está incorporado.
+* Serás capaz de comenzar a escribir sistemas robustos y bien probados en Go.
+* [Mira un video o lee sobre por qué el unit testing y TDD son importantes.](why.md)
 
-- [中文](https://studygolang.gitbook.io/learn-go-with-tests)
-- [Português](https://larien.gitbook.io/aprenda-go-com-testes/)
-- [日本語](https://andmorefine.gitbook.io/learn-go-with-tests/)
-- [Français](https://goosegeesejeez.gitbook.io/apprendre-go-par-les-tests)
-- [한국어](https://miryang.gitbook.io/learn-go-with-tests/)
-- [Türkçe](https://halilkocaoz.gitbook.io/go-programlama-dilini-ogren/)
-- [فارسی](https://go-yaad-begir.gitbook.io/go-ba-test/)
+## Índice
 
-## Support me
+### Fundamentos de Go
 
-I am proud to offer this resource for free, but if you wish to give some appreciation:
+1. [Instalar Go](install-go.md) - Configura el entorno para ser productivo.
+2. [Hola, mundo](hello-world.md) - Declaración de variables, constantes, sentencias if/else, switch, escribe tu primer programa en Go y tu primera prueba. Sintaxis de sub-test y closures.
+3. [Enteros](integers.md) - Explora más a fondo la sintaxis de declaración de funciones y aprende nuevas formas de mejorar la documentación de tu código.
+4. [Iteración](iteration.md) - Aprende sobre el uso de `for` y cómo hacer benchmarking.
+5. [Arrays and slices](arrays-and-slices.md) - Aprende sobre arrays, slices, `len`, varargs, `range` y cobertura de pruebas.
+6. [Structs, methods & interfaces](structs-methods-and-interfaces.md) - Aprende sobre `struct`, métodos, `interface` y pruebas con enfoque table-driven.
+7. [Pointers & errors](pointers-and-errors.md) - Aprende sobre punteros y manejo de errores.
+8. [Maps](maps.md) - Aprende a almacenar valores usando la estructura de datos map.
+9. [Inyección de Dependencias](dependency-injection.md) - Aprende sobre inyección de dependencias, su relación con el uso de interfaces y una introducción al paquete I/O.
+10. [Mocking](mocking.md) - Toma código existente sin pruebas y usa inyección de dependencias con mocks para probarlo.
+11. [Concurrencia](concurrency.md) - Aprende a escribir código concurrente para hacer tu software más rápido.
+12. [Select](select.md) - Aprende a sincronizar procesos asíncronos de forma elegante.
+13. [Reflection](reflection.md) - Aprende sobre "reflection".
+14. [Sync](sync.md) - Aprende algunas funcionalidades del paquete sync, incluyendo `WaitGroup` y `Mutex`.
+15. [Context](context.md) - Usa el paquete context para gestionar y cancelar procesos de larga duración.
+16. [Introducción a las pruebas basadas en propiedades](roman-numerals.md) - Practica algo de TDD con la kata de Números Romanos y una introducción breve en las pruebas basadas en propiedades.
+17. [Maths](math.md) - Usa el paquete `math` para dibujar un reloj en SVG.
+18. [Manejo de archivos](reading-files.md) - Lee archivos y procésalos.
+19. [Plantillas](html-templates.md) - Usa el paquete html/template de Go para renderizar HTML a partir de datos, y aprende también sobre "approval testing".
+20. [Genéricos](generics.md) - Aprende a escribir funciones que aceptan argumentos genéricos y crea tu propia estructura de datos genérica.
+21. [Revisando arrays y slices con genéricos](revisiting-arrays-and-slices-with-generics.md) - Los genéricos son muy útiles al trabajar con colecciones. Aprende a escribir tu propia función `Reduce` y mejora algunos patrones comunes.
 
-- [Tweet me @quii](https://twitter.com/quii)
-- <a rel="me" href="https://mastodon.cloud/@quii">Mastodon</a>
-- [Buy me a coffee :coffee:](https://www.buymeacoffee.com/quii)
-- [Sponsor me on GitHub](https://github.com/sponsors/quii)
+### Construir una aplicación
 
-## Why
+Ahora que, con suerte, has asimilado la sección de _Fundamentos de Go_, tienes una base sólida de la mayoría de las características del lenguaje Go y de cómo aplicar TDD.
 
-* Explore the Go language by writing tests
-* **Get a grounding with TDD**. Go is a good language for learning TDD because it is a simple language to learn and testing is built-in
-* Be confident that you'll be able to start writing robust, well-tested systems in Go
-* [Watch a video, or read about why unit testing and TDD is important](why.md)
+Esta siguiente sección consistirá en construir una aplicación.
 
-## Table of contents
+Cada capítulo iterará sobre el anterior, ampliando la funcionalidad de la aplicación según lo indique nuestro "product owner".
 
-### Go fundamentals
+Se introducirán nuevos conceptos para facilitar la escritura de buen código, pero la mayoría del nuevo material consistirá en aprender lo que se puede lograr con la biblioteca estándar de Go.
 
-1. [Install Go](install-go.md) - Set up environment for productivity.
-2. [Hello, world](hello-world.md) - Declaring variables, constants, if/else statements, switch, write your first go program and write your first test. Sub-test syntax and closures.
-3. [Integers](integers.md) - Further Explore function declaration syntax and learn new ways to improve the documentation of your code.
-4. [Iteration](iteration.md) - Learn about `for` and benchmarking.
-5. [Arrays and slices](arrays-and-slices.md) - Learn about arrays, slices, `len`, varargs, `range` and test coverage.
-6. [Structs, methods & interfaces](structs-methods-and-interfaces.md) - Learn about `struct`, methods, `interface` and table driven tests.
-7. [Pointers & errors](pointers-and-errors.md) - Learn about pointers and errors.
-8. [Maps](maps.md) - Learn about storing values in the map data structure.
-9. [Dependency Injection](dependency-injection.md) - Learn about dependency injection, how it relates to using interfaces and a primer on io.
-10. [Mocking](mocking.md) - Take some existing untested code and use DI with mocking to test it.
-11. [Concurrency](concurrency.md) - Learn how to write concurrent code to make your software faster.
-12. [Select](select.md) - Learn how to synchronise asynchronous processes elegantly.
-13. [Reflection](reflection.md) - Learn about reflection
-14. [Sync](sync.md) - Learn some functionality from the sync package including `WaitGroup` and `Mutex`
-15. [Context](context.md) - Use the context package to manage and cancel long-running processes
-16. [Intro to property based tests](roman-numerals.md) - Practice some TDD with the Roman Numerals kata and get a brief intro to property based tests
-17. [Maths](math.md) - Use the `math` package to draw an SVG clock
-18. [Reading files](reading-files.md) - Read files and process them
-19. [Templating](html-templates.md) - Use Go's html/template package to render html from data, and also learn about approval testing
-20. [Generics](generics.md) - Learn how to write functions that take generic arguments and make your own generic data-structure
-21. [Revisiting arrays and slices with generics](revisiting-arrays-and-slices-with-generics.md) - Generics are very useful when working with collections. Learn how to write your own `Reduce` function and tidy up some common patterns.
+Al final de esta sección, deberías tener un conocimiento sólido de cómo escribir una aplicación en Go de forma iterativa, respaldada por pruebas.
 
-### Build an application
+* [HTTP server](http-server.md) - Crearemos una aplicación que escuche solicitudes HTTP y responda a ellas.
+* [JSON, routing and embedding](json.md) - Haremos que nuestros endpoints devuelvan JSON y exploraremos cómo hacer routing.
+* [I/O and sorting](io.md) - Persistiremos y leeremos nuestros datos desde disco, y cubriremos cómo ordenar datos.
+* [Command line & project structure](command-line.md) - Soportar múltiples aplicaciones desde una misma base de código y leer entrada desde la línea de comandos.
+* [Time](time.md) - Usar el paquete `time` para programar actividades.
+* [WebSockets](websockets.md) - Aprender a escribir y probar un servidor que usa WebSockets.
 
-Now that you have hopefully digested the _Go Fundamentals_ section you have a solid grounding of a majority of Go's language features and how to do TDD.
+### Fundamentos de testing
 
-This next section will involve building an application.
+Abordando otros temas relacionados con las pruebas.
 
-Each chapter will iterate on the previous one, expanding the application's functionality as our product owner dictates.
+* [Introducción a acceptance tests](intro-to-acceptance-tests.md) - Aprende cómo escribir "acceptance tests" para tu código, con un ejemplo del mundo real sobre cómo cerrar un servidor HTTP de forma elegante.
+* [Escalamiento de acceptance tests](scaling-acceptance-tests.md) - Aprende técnicas para gestionar la complejidad al escribir "acceptance tests" para sistemas complejos.
+* [Trabajando sin mocks, stubs and spies](working-without-mocks.md) - Aprende cómo usar fakes y contracts para crear pruebas más realistas y mantenibles.
+* [Guía básica para refactorización](refactoring-checklist.md) - Una discusión sobre qué es el refactoring y algunos consejos básicos sobre cómo hacerlo.
+* [OS exec](os-exec.md) - Un ejemplo de cómo podemos interactuar con el sistema operativo para ejecutar comandos y obtener datos, manteniendo nuestra lógica de negocio testeable.
+* [Error types](error-types.md) - Ejemplo de cómo crear tus propios tipos de error para mejorar tus pruebas y hacer que tu código sea más fácil de trabajar.
+* [Context-aware Reader](context-aware-reader.md) - Aprende cómo aplicar TDD para extender `io.Reader` con soporte para cancelación. Basado en [Context-aware io.Reader for Go](https://pace.dev/blog/2020/02/03/context-aware-ioreader-for-golang-by-mat-ryer)
+* [HTTP Handlers](http-handlers-revisited.md) - Probar HTTP handlers parece ser la pesadilla de muchos desarrolladores. Este capítulo explora los problemas en torno al diseño correcto de los handlers.
 
-New concepts will be introduced to help facilitate writing great code but most of the new material will be learning what can be accomplished from Go's standard library.
+### Meta / Discusión
 
-By the end of this, you should have a strong grasp as to how to iteratively write an application in Go, backed by tests.
+* [Por qué realizar pruebas unitarias y cómo hacer que funcionen para usted](why.md) - Mira un video o lee sobre por qué el unit testing y TDD son importantes.
+* [Anti-patterns](anti-patterns.md) - Un capítulo breve sobre anti-patrones en TDD y pruebas unitarias.
 
-* [HTTP server](http-server.md) - We will create an application which listens to HTTP requests and responds to them.
-* [JSON, routing and embedding](json.md) - We will make our endpoints return JSON and explore how to do routing.
-* [IO and sorting](io.md) - We will persist and read our data from disk and we'll cover sorting data.
-* [Command line & project structure](command-line.md) - Support multiple applications from one code base and read input from command line.
-* [Time](time.md) - using the `time` package to schedule activities.
-* [WebSockets](websockets.md) - learn how to write and test a server that uses WebSockets.
+## Contribuir
 
-### Testing fundamentals
+* _El proyecto original está en desarrollo._ Si te gustaría contribuir, no dudes en ponerte en contacto.
+* Lee [contributing.md](https://github.com/quii/learn-go-with-tests/tree/842f4f24d1f1c20ba3bb23cbc376c7ca6f7ca79a/contributing.md) para conocer las pautas.
+* ¿Tienes alguna idea? Crea una issue [aquí](https://github.com/quii/learn-go-with-tests).
 
-Covering other subjects around testing.
+## A quién va dirigido
 
-* [Introduction to acceptance tests](intro-to-acceptance-tests.md) - Learn how to write acceptance tests for your code, with a real-world example for gracefully shutting down a HTTP server
-* [Scaling acceptance tests](scaling-acceptance-tests.md) - Learn techniques to manage the complexity of writing acceptance tests for non-trivial systems.
-* [Working without mocks, stubs and spies](working-without-mocks.md) - Learn about how to use fakes and contracts to create more realistic and maintainable tests.
-* [Refactoring Checklist](refactoring-checklist.md) - Some discussion on what refactoring is, and some basic tips on how to do it.
+* Personas interesadas en aprender Go.
+* Personas que ya conocen algo de Go, pero quieren profundizar en las pruebas utilizando TDD.
 
-### Questions and answers
+## Lo que necesitarás
 
-I often run in to questions on the internets like
+* ¡Una computadora!
+* [Go instalado](https://golang.org/)
+* Un editor de texto
+* Algo de experiencia en programación. Comprensión de conceptos como `if`, variables, funciones, etc.
+* Sentirte cómodo usando la terminal
 
-> How do I test my amazing function that does x, y and z
+## Comentarios
 
-If you have such a question raise it as an issue on github and I'll try and find time to write a short chapter to tackle the issue. I feel like content like this is valuable as it is tackling people's _real_ questions around testing.
+* Crea issues o envía PRs [aquí](https://github.com/quii/learn-go-with-tests)
+* [Twitter @quii - Autor Original](https://twitter.com/quii)
+* [Twitter @Mike_ErrNil - Autor de versión en español](https://twitter.com/Mike_ErrNil)
 
-* [OS exec](os-exec.md) - An example of how we can reach out to the OS to execute commands to fetch data and keep our business logic testable/
-* [Error types](error-types.md) - Example of creating your own error types to improve your tests and make your code easier to work with.
-* [Context-aware Reader](context-aware-reader.md) - Learn how to TDD augmenting `io.Reader` with cancellation. Based on [Context-aware io.Reader for Go](https://pace.dev/blog/2020/02/03/context-aware-ioreader-for-golang-by-mat-ryer)
-* [Revisiting HTTP Handlers](http-handlers-revisited.md) - Testing HTTP handlers seems to be the bane of many a developer's existence. This chapter explores the issues around designing handlers correctly.
+[Licencia MIT](LICENSE.md)
 
-### Meta / Discussion
-
-* [Why unit tests and how to make them work for you](why.md) - Watch a video, or read about why unit testing and TDD is important
-* [Anti-patterns](anti-patterns.md) - A short chapter on TDD and unit testing anti-patterns
-
-## Contributing
-
-* _This project is work in progress_ If you would like to contribute, please do get in touch.
-* Read [contributing.md](https://github.com/quii/learn-go-with-tests/tree/842f4f24d1f1c20ba3bb23cbc376c7ca6f7ca79a/contributing.md) for guidelines
-* Any ideas? Create an issue
-
-## Background
-
-I have some experience introducing Go to development teams and have tried different approaches as to how to grow a team from some people curious about Go into highly effective writers of Go systems.
-
-### What didn't work
-
-#### Read _the_ book
-
-An approach we tried was to take [the blue book](https://www.amazon.co.uk/Programming-Language-Addison-Wesley-Professional-Computing/dp/0134190440) and every week discuss the next chapter along with the exercises.
-
-I love this book but it requires a high level of commitment. The book is very detailed in explaining concepts, which is obviously great but it means that the progress is slow and steady - this is not for everyone.
-
-I found that whilst a small number of people would read chapter X and do the exercises, many people didn't.
-
-#### Solve some problems
-
-Katas are fun but they are usually limited in their scope for learning a language; you're unlikely to use goroutines to solve a kata.
-
-Another problem is when you have varying levels of enthusiasm. Some people just learn way more of the language than others and when demonstrating what they have done end up confusing people with features the others are not familiar with.
-
-This ends up making the learning feel quite _unstructured_ and _ad hoc_.
-
-### What did work
-
-By far the most effective way was by slowly introducing the fundamentals of the language by reading through [go by example](https://gobyexample.com/), exploring them with examples and discussing them as a group. This was a more interactive approach than "read chapter x for homework".
-
-Over time the team gained a solid foundation of the _grammar_ of the language so we could then start to build systems.
-
-This to me seems analogous to practicing scales when trying to learn guitar.
-
-It doesn't matter how artistic you think you are, you are unlikely to write good music without understanding the fundamentals and practicing the mechanics.
-
-### What works for me
-
-When _I_ learn a new programming language I usually start by messing around in a REPL but eventually, I need more structure.
-
-What I like to do is explore concepts and then solidify the ideas with tests. Tests verify the code I write is correct and documents the feature I have learned.
-
-Taking my experience of learning with a group and my own personal way I am going to try and create something that hopefully proves useful to other teams. Learning the fundamentals by writing small tests so that you can then take your existing software design skills and ship some great systems.
-
-## Who this is for
-
-* People who are interested in picking up Go.
-* People who already know some Go, but want to explore testing with TDD.
-
-## What you'll need
-
-* A computer!
-* [Installed Go](https://golang.org/)
-* A text editor
-* Some experience with programming. Understanding of concepts like `if`, variables, functions etc.
-* Comfortable using the terminal
-
-## Feedback
-
-* Add issues/submit PRs [here](https://github.com/quii/learn-go-with-tests) or [tweet me @quii](https://twitter.com/quii)
-
-[MIT license](LICENSE.md)
-
-[Logo is by egonelbre](https://github.com/egonelbre) What a star!
+[El logo es de egonelbre](https://github.com/egonelbre) ¡Una estrella!
