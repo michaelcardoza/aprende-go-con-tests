@@ -1,11 +1,11 @@
-# Table of contents
+# Índice
 
-* [Learn Go with Tests](gb-readme.md)
+* [Aprende Go con tests](gb-readme.md)
 
-## Go fundamentals
+## Fundamentos de Go
 
-* [Install Go](install-go.md)
-* [Hello, World](hello-world.md)
+* [Instalar Go](install-go.md)
+* [Hola, Mundo](hello-world.md)
 * [Integers](integers.md)
 * [Iteration](iteration.md)
 * [Arrays and slices](arrays-and-slices.md)
