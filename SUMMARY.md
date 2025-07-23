@@ -24,7 +24,7 @@
 * [Manejo de archivos](reading-files.md)
 * [Plantillas](html-templates.md)
 * [Genéricos](generics.md)
-* [Revisando arrays y slices con genéricos](revisiting-arrays-and-slices-with-generics.md)
+* [Arrays y slices con genéricos](revisiting-arrays-and-slices-with-generics.md)
 
 ## Fundamentos de testing
 
@@ -33,13 +33,13 @@
 * [Trabajando sin mocks, stubs and spies](working-without-mocks.md)
 * [Guía básica para refactorización](refactoring-checklist.md)
 
-## Build an application
+## Construir una aplicación
 
 * [Introducción](app-intro.md)
 * [HTTP server](http-server.md)
-* [JSON, routing and embedding](json.md)
-* [I/O and sorting](io.md)
-* [Command line & project structure](command-line.md)
+* [JSON, routing y embedding](json.md)
+* [I/O y sorting](io.md)
+* [Línea de comandos y estructura del proyecto](command-line.md)
 * [Time](time.md)
 * [WebSockets](websockets.md)
 
@@ -48,10 +48,10 @@
 * [OS Exec](os-exec.md)
 * [Error types](error-types.md)
 * [Context-aware Reader](context-aware-reader.md)
-* [Revisiting HTTP Handlers](http-handlers-revisited.md)
+* [HTTP Handlers](http-handlers-revisited.md)
 
 ## Meta
 
 * [Por qué realizar pruebas unitarias y cómo hacer que funcionen para usted](why.md)
-* [Anti-patterns](anti-patterns.md)
+* [Anti-patrones](anti-patterns.md)
 * [Contribuir](contributing.md)

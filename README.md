@@ -42,7 +42,7 @@
 18. [Manejo de archivos](reading-files.md) - Lee archivos y procésalos.
 19. [Plantillas](html-templates.md) - Usa el paquete html/template de Go para renderizar HTML a partir de datos, y aprende también sobre "approval testing".
 20. [Genéricos](generics.md) - Aprende a escribir funciones que aceptan argumentos genéricos y crea tu propia estructura de datos genérica.
-21. [Revisando arrays y slices con genéricos](revisiting-arrays-and-slices-with-generics.md) - Los genéricos son muy útiles al trabajar con colecciones. Aprende a escribir tu propia función `Reduce` y mejora algunos patrones comunes.
+21. [Arrays y slices con genéricos](revisiting-arrays-and-slices-with-generics.md) - Los genéricos son muy útiles al trabajar con colecciones. Aprende a escribir tu propia función `Reduce` y mejora algunos patrones comunes.
 
 ### Construir una aplicación
 
@@ -57,9 +57,9 @@ Se introducirán nuevos conceptos para facilitar la escritura de buen código, p
 Al final de esta sección, deberías tener un conocimiento sólido de cómo escribir una aplicación en Go de forma iterativa, respaldada por pruebas.
 
 * [HTTP server](http-server.md) - Crearemos una aplicación que escuche solicitudes HTTP y responda a ellas.
-* [JSON, routing and embedding](json.md) - Haremos que nuestros endpoints devuelvan JSON y exploraremos cómo hacer routing.
-* [I/O and sorting](io.md) - Persistiremos y leeremos nuestros datos desde disco, y cubriremos cómo ordenar datos.
-* [Command line & project structure](command-line.md) - Soportar múltiples aplicaciones desde una misma base de código y leer entrada desde la línea de comandos.
+* [JSON, routing y embedding](json.md) - Haremos que nuestros endpoints devuelvan JSON y exploraremos cómo hacer routing.
+* [I/O y sorting](io.md) - Persistiremos y leeremos nuestros datos desde disco, y cubriremos cómo ordenar datos.
+* [Línea de comandos y estructura del proyecto](command-line.md) - Soportar múltiples aplicaciones desde una misma base de código y leer entrada desde la línea de comandos.
 * [Time](time.md) - Usar el paquete `time` para programar actividades.
 * [WebSockets](websockets.md) - Aprender a escribir y probar un servidor que usa WebSockets.
 
@@ -69,7 +69,7 @@ Abordando otros temas relacionados con las pruebas.
 
 * [Introducción a acceptance tests](intro-to-acceptance-tests.md) - Aprende cómo escribir "acceptance tests" para tu código, con un ejemplo del mundo real sobre cómo cerrar un servidor HTTP de forma elegante.
 * [Escalamiento de acceptance tests](scaling-acceptance-tests.md) - Aprende técnicas para gestionar la complejidad al escribir "acceptance tests" para sistemas complejos.
-* [Trabajando sin mocks, stubs and spies](working-without-mocks.md) - Aprende cómo usar fakes y contracts para crear pruebas más realistas y mantenibles.
+* [Trabajando sin mocks, stubs y spies](working-without-mocks.md) - Aprende cómo usar fakes y contracts para crear pruebas más realistas y mantenibles.
 * [Guía básica para refactorización](refactoring-checklist.md) - Una discusión sobre qué es el refactoring y algunos consejos básicos sobre cómo hacerlo.
 
 ## Preguntas y respuestas
