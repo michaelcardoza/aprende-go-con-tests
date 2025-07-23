@@ -71,6 +71,9 @@ Abordando otros temas relacionados con las pruebas.
 * [Escalamiento de acceptance tests](scaling-acceptance-tests.md) - Aprende técnicas para gestionar la complejidad al escribir "acceptance tests" para sistemas complejos.
 * [Trabajando sin mocks, stubs and spies](working-without-mocks.md) - Aprende cómo usar fakes y contracts para crear pruebas más realistas y mantenibles.
 * [Guía básica para refactorización](refactoring-checklist.md) - Una discusión sobre qué es el refactoring y algunos consejos básicos sobre cómo hacerlo.
+
+## Preguntas y respuestas
+
 * [OS exec](os-exec.md) - Un ejemplo de cómo podemos interactuar con el sistema operativo para ejecutar comandos y obtener datos, manteniendo nuestra lógica de negocio testeable.
 * [Error types](error-types.md) - Ejemplo de cómo crear tus propios tipos de error para mejorar tus pruebas y hacer que tu código sea más fácil de trabajar.
 * [Context-aware Reader](context-aware-reader.md) - Aprende cómo aplicar TDD para extender `io.Reader` con soporte para cancelación. Basado en [Context-aware io.Reader for Go](https://pace.dev/blog/2020/02/03/context-aware-ioreader-for-golang-by-mat-ryer)
